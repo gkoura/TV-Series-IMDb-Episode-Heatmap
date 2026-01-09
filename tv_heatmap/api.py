@@ -56,12 +56,14 @@ def fetch_all_episodes(imdb_id: str) -> List[Dict]:
     for season in range(1, total_seasons + 1):
         data = fetch_season(imdb_id, season)
         for ep in data.get("Episodes", []):
-            episodes.append({
-                "season": season,
-                "episode": ep.get("Episode"),
-                "title": ep.get("Title"),
-                "imdb_rating": ep.get("imdbRating"),
-            })
+            episodes.append(
+                {
+                    "season": season,
+                    "episode": ep.get("Episode"),
+                    "title": ep.get("Title"),
+                    "imdb_rating": ep.get("imdbRating"),
+                }
+            )
         time.sleep(REQUEST_DELAY)
 
     return episodes

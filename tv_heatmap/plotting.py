@@ -45,7 +45,9 @@ def plot_episode_heatmap(episodes: List[Dict], title: str) -> None:
     for i in range(len(seasons)):
         for j in range(max_episode):
             if not np.isnan(heatmap[i, j]):
-                plt.text(j, i, f"{heatmap[i, j]:.1f}", ha="center", va="center", fontsize=9)
+                plt.text(
+                    j, i, f"{heatmap[i, j]:.1f}", ha="center", va="center", fontsize=9
+                )
 
     plt.tight_layout()
     plt.show()

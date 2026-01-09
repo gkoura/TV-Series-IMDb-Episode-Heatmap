@@ -47,7 +47,6 @@ logs/
 
 # Environment / secrets
 .env
-.env.* 
 secrets.toml
 
 # IDEs and editors

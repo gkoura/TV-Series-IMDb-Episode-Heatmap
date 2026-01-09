@@ -2,11 +2,13 @@
 import os
 import time
 import requests
+from dotenv import load_dotenv
 from typing import List, Dict
 
 BASE_URL = "http://www.omdbapi.com/"
 REQUEST_DELAY = 0.5
 
+load_dotenv()
 API_KEY = os.getenv("OMDB_API_KEY")
 if not API_KEY:
     raise RuntimeError("OMDB_API_KEY environment variable is not set")

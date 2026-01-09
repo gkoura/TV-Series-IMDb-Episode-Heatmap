@@ -21,13 +21,9 @@ The application uses the OMDb API as its data source and presents results via a 
 ---
 
 ## Screenshot
-
-*Add a screenshot here once you have one (recommended).*
 Example:
 
-```
-![Heatmap Screenshot](assets/heatmap_example.png)
-```
+![Heatmap Example](assets/heatmap_example.png)
 
 ---
 

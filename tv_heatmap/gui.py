@@ -60,7 +60,18 @@ class SeriesApp(tk.Tk):
 
     def _fetch_and_plot(self, imdb_id, title):
         try:
+            # Network I/O can stay in background
             episodes = fetch_all_episodes(imdb_id)
+
+            # Schedule GUI plotting on the main thread
+            self.after(0, lambda: self._plot_on_main_thread(episodes, title))
+        except Exception as e:
+            self.after(0, lambda: messagebox.showerror("Error", str(e)))
+
+    def _plot_on_main_thread(self, episodes, title):
+        try:
+            from tv_heatmap.plotting import plot_episode_heatmap
             plot_episode_heatmap(episodes, title)
         except Exception as e:
             messagebox.showerror("Error", str(e))
+

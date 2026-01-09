@@ -37,7 +37,7 @@ Example:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/gkoura/tv-series-imdb-heatmap.git
+git clone https://github.com/gkoura/TV-Series-IMDb-Episode-Heatmap.git
 cd tv-series-imdb-heatmap
 ```
 

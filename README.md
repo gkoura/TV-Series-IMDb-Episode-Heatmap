@@ -38,7 +38,7 @@ Example:
 
 ```bash
 git clone https://github.com/gkoura/TV-Series-IMDb-Episode-Heatmap.git
-cd tv-series-imdb-heatmap
+cd TV-Series-IMDb-Episode-Heatmap
 ```
 
 ### Create and Activate a Virtual Environment
